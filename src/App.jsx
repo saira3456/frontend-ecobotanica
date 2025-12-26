@@ -25,7 +25,7 @@ import UserDashboard from './pages/UserDashboard';
 import PlantProfile from './pages/PlantProfile';
 import AddNewPlantProfile from './pages/AddNewPlantProfile';
 import CommunityChat from './pages/CommunityChat';
-import ChooseRole from './pages/chooseRole';
+import ChooseRole from './pages/ChooseRole';
 import { ShopContext } from './context/ShopContext';
 import { DiseaseProvider } from './context/disease';
 import ForgotPassword from './compononts/ForgotPassword';

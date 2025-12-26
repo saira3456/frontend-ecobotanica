@@ -19,7 +19,7 @@ export const ChatbotProvider = ({ children }) => {
     setLoading(true);
 
     try {
-      const apiKey = "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"; // Just the key, no 'Bearer'
+      const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY; // Just the key, no 'Bearer'
       const response = await axios.post(
         "https://openrouter.ai/api/v1/chat/completions",
         {
@@ -38,7 +38,7 @@ export const ChatbotProvider = ({ children }) => {
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer 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`
+            Authorization: `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`
           }
         }
       );

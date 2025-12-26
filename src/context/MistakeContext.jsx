@@ -31,7 +31,7 @@ Here is the plantation guide:
         },
         {
           headers: {
-            Authorization: "Bearer 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",
+            Authorization: `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
             "Content-Type": "application/json",
           },
         }

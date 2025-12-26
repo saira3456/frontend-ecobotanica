@@ -43,7 +43,7 @@ function CommunityChat() {
   const fetchMessages = async () => {
     try {
       setIsLoading(true);
-      const res = await axios.get("http://localhost:4000/api/messages");
+      const res = await axios.get("https://backend-ecobotanica-production.up.railway.app/api/messages");
       const fetchedMessages = res.data.map((msg) => ({
         ...msg,
         timestamp: msg.timestamp || msg.createdAt || new Date().toISOString(),
@@ -76,7 +76,7 @@ function CommunityChat() {
       setJoined(true);
       fetchMessages();
 
-      socketRef.current = io("http://localhost:4000");
+      socketRef.current = io("https://backend-ecobotanica-production.up.railway.app");
 
       socketRef.current.on("connect", () => {
         socketRef.current.emit("joinChat");
@@ -118,7 +118,7 @@ function CommunityChat() {
     };
 
     try {
-      await axios.post("http://localhost:4000/api/messages", messageData);
+      await axios.post("https://backend-ecobotanica-production.up.railway.app/api/messages", messageData);
       setMessage("");
       setImage(null);
       if (fileInputRef.current) fileInputRef.current.value = "";

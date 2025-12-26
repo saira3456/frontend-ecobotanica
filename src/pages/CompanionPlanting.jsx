@@ -21,8 +21,8 @@ const CompanionPlantingAR = () => {
   const canvasRef = useRef(null);
 
   // API Keys - ADD YOUR REAL API KEYS HERE
-  const PLANT_ID_API_KEY = import.meta.env.VITE_PLANT_KEY;
-  const OPENROUTER_API_KEY = import.meta.env.VITE_OPENROUTER_API_KEY;
+  const PLANT_ID_API_KEY = 'Rg3k7SdCQDDrAaT2ApLRKQvjbp28fWJBrPLNoM132GlmYup6LB';
+  const OPENROUTER_API_KEY = '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';
 
   // Plant detection using computer vision (simulated YOLO)
   const detectPlantsWithCV = (imageData) => {

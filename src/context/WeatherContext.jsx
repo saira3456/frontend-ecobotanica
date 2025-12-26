@@ -9,7 +9,7 @@ export const WeatherProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [weeklyWeather, setWeeklyWeather] = useState([]);
 
-const OPENWEATHER_API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
+  const OPENWEATHER_API_KEY = "c9623f76d598c02467c11c17924e0575";
 
   const fetchWeeklyWeather = async (location) => {
     if (!location) return;
@@ -22,8 +22,8 @@ const OPENWEATHER_API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
     try {
       // 🌍 Step 1: Get coordinates for city
       const geoRes = await axiosExternal.get(
-  `https://api.openweathermap.org/geo/1.0/direct?q=${location},PK&limit=1&appid=${OPENWEATHER_API_KEY}`
-);
+        `https://api.openweathermap.org/geo/1.0/direct?q=${location},PK&limit=1&appid=${OPENWEATHER_API_KEY}`
+      );
 
       if (!geoRes.data || geoRes.data.length === 0) {
         console.warn("[WeatherContext] ⚠️ Invalid location or no coordinates found");
@@ -37,8 +37,8 @@ const OPENWEATHER_API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 
       // 🌦️ Step 2: Get 5-day / 3-hour forecast
       const forecastRes = await axiosExternal.get(
-  `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${OPENWEATHER_API_KEY}`
-);
+        `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${OPENWEATHER_API_KEY}`
+      );
 
       const list = forecastRes.data?.list || [];
       const dailyMap = {};

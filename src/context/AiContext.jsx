@@ -72,7 +72,7 @@ Here is the user input: "${prompt}"
         },
         {
           headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
+            Authorization: "Bearer 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", // 🔑 your actual API key here
             "Content-Type": "application/json",
           },
         }

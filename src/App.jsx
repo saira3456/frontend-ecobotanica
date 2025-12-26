@@ -21,7 +21,7 @@ import { AiProvider } from './context/AiContext';
 import ProfilePage from "./pages/ProfilePage";
 import { ToastContainer } from 'react-toastify';
 import VerifyPage from './pages/VerifyPage';
-import UserDashboard from './pages/userDashboard';
+import UserDashboard from './pages/UserDashboard';
 import PlantProfile from './pages/PlantProfile';
 import AddNewPlantProfile from './pages/AddNewPlantProfile';
 import CommunityChat from './pages/CommunityChat';
